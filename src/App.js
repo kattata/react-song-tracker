@@ -1,12 +1,25 @@
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
+import SongDetails from './SongDetails';
+
 
 function App() {
   return (
-    <div className="App">
-      <div className="content">
-        <h1>app</h1>
+    <Router>
+
+      <div className="App">
+        <Navbar />
+        <Sidebar />
+        <div className="content">
+          <Switch>
+            <Route exact path='/'>
+              <SongDetails />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
