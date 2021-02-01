@@ -13,7 +13,7 @@ function App() {
         <Sidebar />
         <div className="content">
           <Switch>
-            <Route exact path='/'>
+            <Route exact path='/songs/:id'>
               <SongDetails />
             </Route>
           </Switch>

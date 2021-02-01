@@ -1,0 +1,18 @@
+{
+    "songs": [
+        {
+            "title": "Sweet Creature",
+            "artist": "Harry Styles",
+            "album": "Harry Styles",
+            "img": "https://static.billboard.com/files/media/Harry-Styles-album-art-2017-billboard-1240-compressed.jpg",
+            "id": 1
+        },
+        {
+            "title": "Cotton Candy",
+            "artist": "YUNGBLUD",
+            "album": "weird!",
+            "img": "https://static.wikia.nocookie.net/yungblud/images/9/94/Weird-Album-Art-Cover.jpeg/revision/latest?cb=20200923233612",
+            "id": 2
+        }
+    ]
+}
