@@ -5,7 +5,7 @@ const SongPreview = ({ songs }) => {
     return (
         <div className="song-preview-list">
             {songs.map((song) => {
-                return <Link to={`songs/${song.id}`} key={song.id}>
+                return <Link to={`/songs/${song.id}`} key={song.id}>
                     <div className="song-preview">
                         <img src={song.img} alt="" />
                         <div className="preview-details">

@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     return (
         <div className="navbar">
-            <h2>Trackr</h2>
+            <Link to="/">
+                <h2>Trackr</h2>
+            </Link>
             <div className="profile">
                 <p>Kasia</p>
                 {/* <div className="profile-pic"></div> */}
