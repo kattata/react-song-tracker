@@ -1,6 +1,6 @@
 import SongPreview from "./SongPreview";
 import useFetch from "./useFetch";
-import plus from "./img/plus.svg";
+import plus from "../img/plus.svg";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
