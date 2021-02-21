@@ -1,11 +1,8 @@
 import SongPreview from "./SongPreview";
-import useFetch from "./useFetch";
 import plus from "../img/plus.svg";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
-
-    const { data: songs } = useFetch("http://localhost:8000/songs");
+const Sidebar = ({ songs }) => {
 
     return (
         <div className="sidebar">

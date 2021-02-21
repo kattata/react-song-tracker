@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const AddSong = () => {
+const AddSong = ({ songsRef }) => {
 
     const [title, setTitle] = useState("");
     const [artist, setArtist] = useState("");
@@ -12,16 +12,10 @@ const AddSong = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newSong = { title, artist, album, img };
-        console.log(e);
 
-        fetch('http://localhost:8000/songs', {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newSong)
-        })
-            .then(
-                history.push('/')
-            )
+        songsRef.add(newSong);
+
+        history.push("/");
     }
 
     return (

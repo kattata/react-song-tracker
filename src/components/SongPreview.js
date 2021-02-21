@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const SongPreview = ({ songs }) => {
+    console.log(songs);
 
     return (
         <div className="song-preview-list">

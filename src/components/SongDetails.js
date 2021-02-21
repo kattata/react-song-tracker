@@ -1,18 +1,26 @@
-import { useHistory, useParams } from 'react-router-dom';
-import useFetch from './useFetch';
+import { useParams, useHistory } from 'react-router-dom';
+import firebase from '../firebase';
+import { useEffect, useState } from 'react';
 
-const SongDetails = () => {
+
+const SongDetails = ({ songsRef }) => {
     const { id } = useParams();
-    const { data: song } = useFetch('http://localhost:8000/songs/' + id);
+
+    const [song, setSong] = useState(null)
+
+    useEffect(() => {
+        songsRef.doc(`${id}`).get().then((doc) => {
+            setSong(doc.data())
+        })
+    }, [songsRef, id])
+
+
     const history = useHistory();
 
     const handleDelete = () => {
-        fetch('http://localhost:8000/songs/' + song.id, {
-            method: "DELETE"
+        songsRef.doc(`${id}`).delete().then(() => {
+            history.push("/");
         })
-            .then(
-                history.push('/')
-            )
     }
 
     return (
